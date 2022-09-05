@@ -3,7 +3,7 @@
 require("db.php");
 
 
-// $sql="SELECT id,name,url FROM wire_products";
+// $sql="SELECT id,name,url FROM your_table_name";
 
 // $result=mysqli_query($conn,$sql);
 //    //////error in php of data require line 10
@@ -34,12 +34,10 @@ require("db.php");
 		$where .=" WHERE ";
 		$where .=" ( name LIKE '".$params['search']['value']."%' ";    
 		$where .=" OR url LIKE '".$params['search']['value']."%' )";
-
-		// $where .=" OR employee_age LIKE '".$params['search']['value']."%' ";
 	}
 
 	// getting total number records without any search
-	$sql = "SELECT id,name,url FROM wire_products";
+	$sql = "SELECT id,name,url FROM your_table_name";
 	$sqlTot .= $sql;
 	$sqlRec .= $sql;
 	//concatenate search sql if value exist
